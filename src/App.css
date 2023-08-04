@@ -1,0 +1,112 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0c4c95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  height: 100vh;
+}
+
+.container {
+  background: #2e609a;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+input[type="text"],
+input[type="text"]:focus {
+  background: transparent;
+  border: 0;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  outline: none;
+  color: rgba(255,255,255,0.5);
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.summary {
+  background: #20257d;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.summary label {
+  line-height: 3rem;
+}
+
+.split button {
+  color: white;
+  background: #0c4c95;
+  cursor: pointer;
+  border-radius: 30%;
+  border: none;
+  width: 25px;
+  height: 25px;
+}
+
+.split button:hover {
+  background: #042850;
+}
+
+.split-control {
+  display: flex;
+  align-items: center;
+}
+
+.split-control span {
+  display: block;
+  padding: 0 5px;
+}
+
+.result {
+  text-align: right;
+}
+
+@media screen and (max-width: 500px) and (min-height: 300px) and (max-height: 600px) {
+  .container {
+    max-width: 90%;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+  
+  input[type="text"],
+  input[type="text"]:focus {
+    font-size: 1.8rem;
+  }
+
+  .summary {
+    font-size: 2rem;
+  }
+
+  .summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .split {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
